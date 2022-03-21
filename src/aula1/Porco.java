@@ -1,4 +1,4 @@
-package disciplina.lip2.aula1;
+package aula1;
 
 public class Porco implements Animal{
 

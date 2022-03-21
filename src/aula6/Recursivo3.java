@@ -1,4 +1,4 @@
-package disciplina.lip2.aula6;
+package aula6;
 
 import java.util.Scanner;
 

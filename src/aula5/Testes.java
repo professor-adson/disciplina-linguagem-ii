@@ -1,4 +1,4 @@
-package disciplina.lip2.aula5;
+package aula5;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;

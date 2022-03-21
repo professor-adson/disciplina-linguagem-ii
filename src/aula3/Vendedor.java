@@ -1,4 +1,4 @@
-package disciplina.lip2.aula3;
+package aula3;
 
 public class Vendedor extends Funcionario {
     private double comissao;

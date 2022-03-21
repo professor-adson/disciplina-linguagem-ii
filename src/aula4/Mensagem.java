@@ -1,4 +1,4 @@
-package disciplina.lip2.aula4;
+package aula4;
 
 public abstract class Mensagem {
     public String destinatario;

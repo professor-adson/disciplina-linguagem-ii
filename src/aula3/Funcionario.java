@@ -1,4 +1,4 @@
-package disciplina.lip2.aula3;
+package aula3;
 
 public abstract class Funcionario {
     private String nome;

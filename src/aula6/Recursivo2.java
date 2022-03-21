@@ -1,19 +1,19 @@
-package disciplina.lip2.aula6;
+package aula6;
 
 import java.util.Scanner;
 
-public class Recursivo1 {
+public class Recursivo2 {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         System.out.println("Digite um número: ");
         int n = s.nextInt();
-        int soma = somaRecursiva(n);
+        float soma = somaFracaoRecursiva(n);
         System.out.println(soma);
     }
 
-    static int somaRecursiva(int n) {
+    static float somaFracaoRecursiva(float n) {
         if (n - 1 > 0) {
-            return n + somaRecursiva(n - 1);
-        } else return n;
+            return (1/n) + somaFracaoRecursiva(n - 1);
+        } else return (1/n);
     }
 }

@@ -1,4 +1,4 @@
-package disciplina.lip2.aula3;
+package aula3;
 
 public class Testes {
     public static void main(String[] args) {

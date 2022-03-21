@@ -1,4 +1,4 @@
-package disciplina.lip2.aula2;
+package aula2;
 
 public class Moto implements Automovel{
     @Override
