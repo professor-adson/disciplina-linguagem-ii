@@ -1,30 +1,23 @@
-package aula8;
+package aula9;
 
-import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class TesteArray {
+public class TesteMeses {
     public static void main(String[] args) {
-        int[] array = new int[10];
+        String[] meses = new String[12];
 
         try {
             Scanner s = new Scanner(System.in);
-            System.out.println("Digite um valor");
+            System.out.println("Digite o índice do mês");
             int input = s.nextInt();
-            int index = 0;
 
             while (input != 0) {
-                if (index > 9) {
+                if (input > 11) {
                     throw new IndexOutOfBoundsException("Excedeu o limite");
                 }
-                array[index] = input;
-
-                System.out.println("Digite um valor");
-                input = s.nextInt();
-                index++;
+                System.out.println(meses[input]);
             }
-            System.out.println(Arrays.toString(array));
         } catch (IndexOutOfBoundsException iobe) {
             System.out.println("Fora dos limites");
             iobe.printStackTrace();
