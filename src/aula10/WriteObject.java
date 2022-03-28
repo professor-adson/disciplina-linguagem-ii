@@ -9,7 +9,7 @@ public class WriteObject {
         t.setX("A");
 
         try {
-            FileOutputStream fout = new FileOutputStream("C:\\Users\\Public\\Documents");
+            FileOutputStream fout = new FileOutputStream("C:\\Users\\Public\\Documents\\object.ser");
             ObjectOutputStream oos = new ObjectOutputStream(fout);
             oos.writeObject(t);
 
