@@ -1,5 +1,7 @@
 package aula11;
 
+import java.util.Objects;
+
 public class Pessoa {
     private String nome;
     private int idade;
@@ -9,6 +11,10 @@ public class Pessoa {
         this.nome = nome;
         this.idade = idade;
         this.altura = altura;
+    }
+
+    public Pessoa(String nome) {
+        this.nome = nome;
     }
 
     public String getNome() {
@@ -42,5 +48,13 @@ public class Pessoa {
                 ", idade=" + idade +
                 ", altura=" + altura +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Pessoa)) return false;
+        Pessoa pessoa = (Pessoa) o;
+        return Objects.equals(nome, pessoa.nome);
     }
 }

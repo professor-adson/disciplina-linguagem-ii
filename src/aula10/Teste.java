@@ -15,6 +15,6 @@ public class Teste implements Serializable {
 
     @Override
     public String toString() {
-        return "Teste{" + "x='" + x + '\'' + '}';
+        return "Este objeto é {" + "x='" + x + '\'' + '}';
     }
 }

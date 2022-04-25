@@ -32,4 +32,8 @@ public class TesteArray {
             System.out.println("Valor não numérico");
         }
     }
+
+    public static void doSomething() {
+        System.out.println("hello");
+    }
 }

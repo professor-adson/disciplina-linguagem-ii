@@ -1,7 +1,5 @@
 package aula11;
 
-import java.util.Arrays;
-
 public class Agenda {
     Pessoa[] pessoas;
     int ultimoIndice;
