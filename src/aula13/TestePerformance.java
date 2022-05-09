@@ -10,7 +10,7 @@ public class TestePerformance {
 
     Collection<Integer> teste = new HashSet<>();
     long inicio = System.currentTimeMillis();
-    int total = 1000000;
+    int total = 100000;
 
     for (int i = 0; i < total; i++) {
       teste.add(i);
