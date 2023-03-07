@@ -8,34 +8,45 @@ public class Testes {
 
     Scanner s = new Scanner(System.in);
 
+    boolean continua = true;
+    while (continua) {
+      int index = getIndex(s, a1.getNotas());
+      double nota = getNota(s);
+
+      a1.setNota(index, nota);
+      System.out.println("nota " + index + "= " + a1.getNotas()[index]);
+
+      System.out.println("Continua?");
+      continua = s.nextBoolean();
+    }
+    System.out.println("média " + a1.calcularMedia());
+  }
+
+  public static int getIndex(Scanner s, double[] notas) {
     try {
-      boolean continua = true;
-      while (continua) {
-        System.out.println("Digite o índice da nota:");
-        int index = s.nextInt();
+      System.out.println("Digite o índice da nota:");
+      int index = s.nextInt();
 
-        if (index < 0 || index >= a1.getNotas().length) {
-          throw new Exception("Índice inválido");
-        }
-
-        System.out.println("Digite a nota:");
-        double nota = s.nextDouble();
-
-        if (nota < 0) {
-          throw new Exception("Nota negativa");
-        }
-
-        a1.setNota(index, nota);
-
-        System.out.println("nota " + index + "= " + a1.getNotas()[index]);
-
-        System.out.println("Continua?");
-        continua = s.nextBoolean();
+      if (index < 0 || index >= notas.length) {
+        throw new Exception("Índice inválido");
       }
-      System.out.println("média " + a1.calcularMedia());
-
+      return index;
     } catch (Exception e) {
-      e.printStackTrace();
+      return getIndex(s, notas);
+    }
+  }
+
+  public static double getNota(Scanner s) {
+    try {
+      System.out.println("Digite a nota:");
+      double nota = s.nextDouble();
+
+      if (nota < 0) {
+        throw new Exception("Nota negativa");
+      }
+      return nota;
+    } catch (Exception e) {
+      return getNota(s);
     }
   }
 }
